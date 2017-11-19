@@ -9,7 +9,28 @@
     </head>
     <body>
         <div class="container">
-            <h1>JS AssignmentTracker <small>by CodingTheSmartWay.com</small></h1>
+            <h1>Assignment Tracker GUI<small> by Full-stack Web Solutions</small></h1>
+            <div class=jumbotron>
+                <h3>Add New Issue:</h3>
+                <form id="IssueInputForm">
+                    <div class="form-group">
+                        <label for="issueDescInput">Description</label>
+                        <input type="text" class="form-control" id="issueDescInput" placeholder="Describe the issue...">
+                    </div>
+                    <div class="form-group">
+                        <label for="issueSeverityInput">Severity</label>
+                        <select id="issueSeverityInput">
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="issueDescInput">Description</label>
+                        <input type="text" class="form-control" id="issueDescInput" placeholder="Describe the issue...">
+                    </div>
+                </form>
+            </div>
         </div>
         <script src="http://chancejs.com/chance.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
