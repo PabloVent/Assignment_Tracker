@@ -1,3 +1,5 @@
+document.getElementById('issueImputForm').addEventListener('submit', saveIssue);
+
 function fetchIssues(){
     var issues = JSON.parse(localStorage.getItem('issues'));
     var issuesList = document.getElementById('issuesList');
