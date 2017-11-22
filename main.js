@@ -26,6 +26,8 @@ function saveIssue(e){
         issues.push(issue);
         localStorage.setItem('issues', JSON.stringify(issues));
     }
+
+    document.getElementById('issueInputForm').reset(); // removes values in the form.
 }
 
 function fetchIssues(){
