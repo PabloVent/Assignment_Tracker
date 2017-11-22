@@ -1,6 +1,32 @@
-// Source code that sends data to localStore every time the submit button gets clicked
-
+// Source code that sends data to localStore every time the submit button gets clicked;
+// namely event handler.
 document.getElementById('issueImputForm').addEventListener('submit', saveIssue);
+
+function saveIssue(e){
+    var issueDesc = document.getElementById('issueDescInput').value;
+    var issueSeverity = document.getElementById('issueSeverityInput').value;
+    var issueAssignedTo = document.getElementById('issueAssignedToInput').value;
+    var issueId = chance.guid();
+    var issueStatus = 'Open';
+
+    var issue = {
+        id: issueId,
+        description: issueDesc,
+        severity: issueSeverity,
+        assignedTo: issueAssignedTo,
+        status: issueStatus
+    }
+
+    if(localStorage.getItem('issues') === null){
+        var issues = [];
+        issues.push(issue);
+        localStorage.setItem('issues', JSON.stringify(issues));
+    } else {
+        var issues = JSON.parse(localStorage.getItem('issues'));// insert new object. Generate an array and assign it to 'issues'.
+        issues.push(issue);
+        localStorage.setItem('issues', JSON.stringify(issues));
+    }
+}
 
 function fetchIssues(){
     var issues = JSON.parse(localStorage.getItem('issues'));
