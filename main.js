@@ -1,3 +1,5 @@
+// Source code that sends data to localStore every time the submit button gets clicked
+
 document.getElementById('issueImputForm').addEventListener('submit', saveIssue);
 
 function fetchIssues(){
