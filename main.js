@@ -28,6 +28,9 @@ function saveIssue(e){
     }
 
     document.getElementById('issueInputForm').reset(); // removes values in the form.
+    fetchIssues();// new element is in localStorage, list output needs to be regenerated.
+    // new element needs to be included in the output list as well.
+    e.preventDefault();
 }
 
 function fetchIssues(){
